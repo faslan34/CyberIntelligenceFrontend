@@ -6,7 +6,7 @@ async function askQuestion() {
   responseDiv.innerHTML = '<div class="loader"></div>';
 
   try {
-    const result = await fetch("http://localhost:5000/ask", {
+    const result = await fetch("https://cyber-dashboard-h47l.onrender.com/ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
@@ -60,7 +60,7 @@ async function loadNews() {
   newsContainer.innerHTML = "<p>Loading latest cybersecurity news...</p>";
 
   try {
-    const res = await fetch("http://localhost:5000/news");
+    const res = await fetch("https://cyber-dashboard-h47l.onrender.com/news");
     const articles = await res.json();
 
     newsContainer.innerHTML = ""; // Clear placeholder
@@ -85,7 +85,7 @@ async function loadCisaVulnerabilities() {
   container.innerHTML = "<p>Loading known exploited vulnerabilities...</p>";
 
   try {
-    const res = await fetch("http://localhost:5000/cisa-vulnerabilities");
+    const res = await fetch("https://cyber-dashboard-h47l.onrender.com/api/cisa-alerts");
     const vulns = await res.json();
 
     container.innerHTML = "";
@@ -111,7 +111,7 @@ async function loadNvdVulnerabilities() {
   container.innerHTML = "<p>Loading recent NVD vulnerabilities...</p>";
 
   try {
-    const res = await fetch("http://localhost:5000/nvd-vulnerabilities");
+    const res = await fetch("https://cyber-dashboard-h47l.onrender.com/api/threat-intel");
     const vulns = await res.json();
 
     container.innerHTML = "";
@@ -135,7 +135,7 @@ async function loadThreatIntel() {
   container.innerHTML = "<p>Loading threat intelligence feeds...</p>";
 
   try {
-    const res = await fetch("http://localhost:5000/threat-intel");
+    const res = await fetch("https://cyber-dashboard-h47l.onrender.com/osint-lookup");
     const threats = await res.json();
 
     container.innerHTML = "";
@@ -161,7 +161,7 @@ async function searchOSINT() {
   resultsDiv.innerHTML = "Loading...";
 
   try {
-    const res = await fetch("http://localhost:5000/osint-lookup", {
+    const res = await fetch("https://cyber-dashboard-h47l.onrender.com/osint-lookup", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
