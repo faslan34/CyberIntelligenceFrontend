@@ -11,8 +11,14 @@ function CisaSection() {
   const perPage = 10;
 
   useEffect(() => {
-    fetch("/https://cyber-dashboard-h47l.onrender.com/api/cisa-alerts")
-      .then((res) => res.json())
+    fetch("https://cyber-dashboard-h47l.onrender.com/api/cisa-alerts")
+      .then(async (res) => {
+        const contentType = res.headers.get("content-type");
+        if (!contentType || !contentType.includes("application/json")) {
+          throw new Error("Response is not JSON");
+        }
+        return res.json();
+      })
       .then((data) => {
         const results = data.vulnerabilities || data || [];
         setVulns(results);
