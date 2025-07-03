@@ -34,7 +34,7 @@ const ThreatFoxEntries = () => {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/threatfox');
+        const res = await fetch('https://cyber-dashboard-h47l.onrender.com/api/threatfox');
         const json = await res.json();
         const malware = json.malware || [];
         setData(malware);

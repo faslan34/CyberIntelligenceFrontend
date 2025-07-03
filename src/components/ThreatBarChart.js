@@ -15,7 +15,7 @@ const ThreatBarChart = () => {
   useEffect(() => {
     const fetchThreatData = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/threatfox');
+        const res = await fetch('https://cyber-dashboard-h47l.onrender.com/api/threatfox');
         const json = await res.json();
         console.log("📊 ThreatFox chart data:", json);
 

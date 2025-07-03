@@ -11,7 +11,7 @@ function CisaSection() {
   const perPage = 10;
 
   useEffect(() => {
-    fetch("/api/cisa-alerts")
+    fetch("/https://cyber-dashboard-h47l.onrender.com/api/cisa-alerts")
       .then((res) => res.json())
       .then((data) => {
         const results = data.vulnerabilities || data || [];
