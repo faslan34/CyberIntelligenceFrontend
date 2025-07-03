@@ -12,7 +12,7 @@ function AISection() {
     setResponse('');
 
     try {
-      const res = await fetch('/ask', {
+      const res = await fetch('https://cyber-dashboard-h47l.onrender.com/api/ask'
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: question.trim() })

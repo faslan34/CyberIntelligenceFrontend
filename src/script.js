@@ -6,7 +6,7 @@ async function askQuestion() {
   responseDiv.innerHTML = '<div class="loader"></div>';
 
   try {
-    const result = await fetch("https://cyber-dashboard-h47l.onrender.com/ask", {
+    const result = await fetch("https://cyber-dashboard-h47l.onrender.com/api/ask", {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
