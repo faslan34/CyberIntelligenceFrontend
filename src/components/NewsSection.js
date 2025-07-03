@@ -7,7 +7,7 @@ function NewsSection() {
   useEffect(() => {
     const fetchNews = async () => {
       try {
-        const res = await fetch('http://localhost:5000/news');
+        const res = await fetch("https://cyber-dashboard-h47l.onrender.com/news");
         const data = await res.json();
         setNews(data);
       } catch (err) {

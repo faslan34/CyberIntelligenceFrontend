@@ -11,7 +11,7 @@ function OsintSection() {
     setResults([]);
 
     try {
-      const res = await fetch('https://cyber-dashboard-h47l.onrender.com/osint-lookup', {
+      const res = await fetch("https://cyber-dashboard-h47l.onrender.com/osint-lookup", {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ query: input.trim() }),
