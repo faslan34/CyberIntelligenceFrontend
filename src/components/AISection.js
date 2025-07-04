@@ -12,7 +12,7 @@ function AISection() {
     setResponse('');
 
     try {
-      const res = await fetch('https://cyber-dashboard-h47l.onrender.com/api/ask'
+      const res = await fetch('https://cyber-dashboard-h47l.onrender.com/api/ask', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ question: question.trim() })
@@ -73,7 +73,7 @@ function AISection() {
         {loading ? (
           <div className="loader"></div>
         ) : (
-          response && <div className>{response}</div>
+          response && <div className="response-text">{response}</div>
         )}
       </div>
     </section>
