@@ -7,7 +7,7 @@ const ThreatIntelFeed = () => {
   useEffect(() => {
     const fetchIntel = async () => {
       try {
-        const res = await fetch('http://localhost:5000/api/threat-intel');
+        const res = await fetch('http://https://cyber-dashboard-h47l.onrender.com/api/threat-intel');
         const data = await res.json();
         setIntel(data);
       } catch (error) {
